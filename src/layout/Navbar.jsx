@@ -16,17 +16,17 @@ const Navbar = () => {
     
     const navLinks = <>
         <li><NavLink to='/' className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " border-b-2 border-white " : ""
+            isPending ? "pending" : isActive ? " text-white " : ""
         }>Home</NavLink></li>
         <li><NavLink to='/addproduct'
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? " border-b-2 border-white " : ""
+                isPending ? "pending" : isActive ? " text-white " : ""
             }
         >Add Product</NavLink></li>
         <li><NavLink to='/mycart'
             className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? 
-                " border-b-2 border-white " : ""
+                " text-white " : ""
             } >My Cart</NavLink></li>
     </>
     return (
