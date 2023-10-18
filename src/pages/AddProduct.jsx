@@ -11,10 +11,11 @@ const AddProduct = () => {
     const brand = form.brand.value;
     const type = form.type.value;
     const price = form.price.value;
+    const shortD=form.sd.value;
     const rating = form.rating.value;
     const image = form.image.value;
 
-    const newProduct = { name, type, price, rating, brand, image }
+    const newProduct = { name, type, price,shortD, rating, brand, image }
     console.log(newProduct);
 
     // Send data to the server
@@ -100,6 +101,17 @@ const AddProduct = () => {
             </label>
           </div>
 
+        </div>
+        <div className=" ">
+                    <div className="form-control w-full">
+                        <label className="label">
+                            <span className="label-text">Short Description</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="sd" placeholder="Describe your product in short" className="w-full input input-bordered" />
+                        </label>
+                    </div>
+                    
         </div>
         <div className=" md:flex gap-20">
           <div className="form-control md:w-1/2">

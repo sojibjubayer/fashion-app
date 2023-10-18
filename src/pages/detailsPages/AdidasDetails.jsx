@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import {  useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 const AdidasDetails = () => {
@@ -9,27 +11,22 @@ const AdidasDetails = () => {
     console.log(params);
     console.log(brandProduct);
 
-    const handleAddToCart = brand => {
+    const firebaseUser=useContext(AuthContext)
+    console.log(firebaseUser);
+    
+
+    const handleAddToCart = getBrand => {
+        const {name,type,price,rating,brand,image}=getBrand
+        const cartBrand ={name,type,price,rating,brand,image}
+        cartBrand.email=firebaseUser.user.email
         console.log(brand);
-        // event.preventDefault()
-        // const form = event.target
-        // const name = form.name.value;
-        // const brand = form.brand.value;
-        // const type = form.type.value;
-        // const price = form.price.value;
-        // const rating = form.rating.value;
-        // const image = form.image.value;
-    
-        // const newProduct = { name, type, price, rating, brand, image }
-        // console.log(newProduct);
-    
-        // Send data to the server
-        fetch('http://localhost:5000/products', {
+        
+        fetch('http://localhost:5000/cart', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
           },
-          body: JSON.stringify(brand)
+          body: JSON.stringify(cartBrand)
         })
           .then(res => res.json())
           .then(data => {

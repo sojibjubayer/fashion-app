@@ -60,7 +60,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/mycart',
-                element: <PrivateRouters><MyCart></MyCart></PrivateRouters>
+                element: <PrivateRouters><MyCart></MyCart></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/cart')
             },
             {
                 path:'/adidas/:id',
