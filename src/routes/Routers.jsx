@@ -8,12 +8,13 @@ import PrivateRouters from "./PrivateRouters";
 import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
 import MyCart from "../pages/MyCart";
-import Adidas from "../brand_pages/Adidas";
-import Nike from "../brand_pages/Nike";
-import Gucci from "../brand_pages/Gucci";
-import Levis from "../brand_pages/Levis";
-import HnM from "../brand_pages/HnM";
-import Zara from "../brand_pages/Zara";
+import Adidas from "../pages/brand_pages/Adidas";
+import Nike from "../pages/brand_pages/Nike";
+import Gucci from "../pages/brand_pages/Gucci";
+import Levis from "../pages/brand_pages/Levis";
+import HnM from "../pages/brand_pages/HnM";
+import Zara from "../pages/brand_pages/Zara";
+import AdidasDetails from "../pages/detailsPages/AdidasDetails";
 
 
 
@@ -21,59 +22,68 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Roots></Roots>,
-        errorElement:<NotFound></NotFound>,
+        errorElement: <NotFound></NotFound>,
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader:()=> fetch('/brands.json')
+                loader: () => fetch('/brands.json')
             },
             {
-                path:'/adidas',
-                element:<PrivateRouters><Adidas></Adidas></PrivateRouters>
+                path: '/adidas',
+                element: <PrivateRouters><Adidas></Adidas></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
-                path:'/nike',
-                element:<PrivateRouters><Nike></Nike></PrivateRouters>
+                path: '/nike',
+                element: <PrivateRouters><Nike></Nike></PrivateRouters>
             },
             {
-                path:'/gucci',
-                element:<PrivateRouters><Gucci></Gucci></PrivateRouters>
+                path: '/gucci',
+                element: <PrivateRouters><Gucci></Gucci></PrivateRouters>
             },
             {
-                path:`/levi's`,
-                element:<PrivateRouters><Levis></Levis></PrivateRouters>
+                path: `/levi's`,
+                element: <PrivateRouters><Levis></Levis></PrivateRouters>
             },
             {
-                path:'/h&m',
-                element:<PrivateRouters><HnM></HnM></PrivateRouters>
+                path: '/h&m',
+                element: <PrivateRouters><HnM></HnM></PrivateRouters>
             },
             {
-                path:'/zaras',
-                element:<PrivateRouters><Zara></Zara></PrivateRouters>
+                path: '/zaras',
+                element: <PrivateRouters><Zara></Zara></PrivateRouters>
             },
             {
-                path:'/addproduct',
-                element:<PrivateRouters><AddProduct></AddProduct></PrivateRouters>
+                path: '/addproduct',
+                element: <PrivateRouters><AddProduct></AddProduct></PrivateRouters>
             },
             {
-                path:'/mycart',
-                element:<PrivateRouters><MyCart></MyCart></PrivateRouters>
-            },
-           
-            {
-                path:'/login',
-                element:<Login></Login>
+                path: '/mycart',
+                element: <PrivateRouters><MyCart></MyCart></PrivateRouters>
             },
             {
-                path:'register',
-                element:<Register></Register>
+                path:'/adidas/:id',
+                element:<PrivateRouters><AdidasDetails></AdidasDetails></PrivateRouters>,
+                // loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
+                loader: () => fetch('http://localhost:5000/products')
+
+
+            },
+
+            {
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/contact',
-                element:<ContactUs></ContactUs>
+                path: 'register',
+                element: <Register></Register>
             },
-            
+            {
+                path: '/contact',
+                element: <ContactUs></ContactUs>
+            },
+
         ]
 
     },
