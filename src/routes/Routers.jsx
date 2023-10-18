@@ -8,6 +8,12 @@ import PrivateRouters from "./PrivateRouters";
 import NotFound from "../pages/NotFound";
 import ContactUs from "../pages/ContactUs";
 import MyCart from "../pages/MyCart";
+import Adidas from "../brand_pages/Adidas";
+import Nike from "../brand_pages/Nike";
+import Gucci from "../brand_pages/Gucci";
+import Levis from "../brand_pages/Levis";
+import HnM from "../brand_pages/HnM";
+import Zara from "../brand_pages/Zara";
 
 
 
@@ -21,6 +27,30 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader:()=> fetch('/brands.json')
+            },
+            {
+                path:'/adidas',
+                element:<PrivateRouters><Adidas></Adidas></PrivateRouters>
+            },
+            {
+                path:'/nike',
+                element:<PrivateRouters><Nike></Nike></PrivateRouters>
+            },
+            {
+                path:'/gucci',
+                element:<PrivateRouters><Gucci></Gucci></PrivateRouters>
+            },
+            {
+                path:`/levi's`,
+                element:<PrivateRouters><Levis></Levis></PrivateRouters>
+            },
+            {
+                path:'/h&m',
+                element:<PrivateRouters><HnM></HnM></PrivateRouters>
+            },
+            {
+                path:'/zaras',
+                element:<PrivateRouters><Zara></Zara></PrivateRouters>
             },
             {
                 path:'/addproduct',
