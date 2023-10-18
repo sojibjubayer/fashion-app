@@ -16,25 +16,22 @@ const Home = () => {
                  <img  className="w-full h-[40vh]  md:h-[70vh] mx-auto" src={bannerImage} alt="" />
             </div>
             <div>
-                <h2 className=" font-bold p-2 rounded-sm text-white bg-[#FFA171]  ">Brand Name</h2>
+                <h2 className="md:w-[450px] mx-auto font-bold p-2 rounded-sm text-center text-2xl bg-black text-red-600  ">
+                    Our Brand New Products </h2>
             </div>
-            Brand image and name go here
-            <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>
-
-                    
+           
+            <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>           
                     {
                         brands.map(brand=><div key={brand.id}>
-                            <div>
-                                <img src={brand.image} alt="" />
-                                <h3>{brand.name}</h3>
+                            <div className="md:w-[300px] h-[250px] mx-auto bg-amber-200 rounded-t-xl">
+                                <img className="w-full h-[200px] rounded-t-xl" src={brand.image} alt="" />
+                                <h3 className="text-center text-xl font-bold pt-2">{brand.name}</h3>
 
                             </div>
                         </div>)
                     }
                 
             </div>
-           
-
             <Helmet>
                 <title>FA | Home </title>
             </Helmet>
