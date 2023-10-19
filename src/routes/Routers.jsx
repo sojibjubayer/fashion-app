@@ -15,6 +15,7 @@ import Levis from "../pages/brand_pages/Levis";
 import HnM from "../pages/brand_pages/HnM";
 import Zara from "../pages/brand_pages/Zara";
 import AdidasDetails from "../pages/detailsPages/AdidasDetails";
+import UpdateProduct from "../pages/UpdateProduct";
 
 
 
@@ -68,10 +69,12 @@ const router = createBrowserRouter([
                 element:<PrivateRouters><AdidasDetails></AdidasDetails></PrivateRouters>,
                 // loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
                 loader: () => fetch('http://localhost:5000/products')
-
-
             },
-
+            {
+                path:'/updateProduct/:id',
+                element:<UpdateProduct></UpdateProduct>,
+                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)            
+            },
             {
                 path: '/login',
                 element: <Login></Login>
@@ -84,9 +87,7 @@ const router = createBrowserRouter([
                 path: '/contact',
                 element: <ContactUs></ContactUs>
             },
-
         ]
-
     },
 ]);
 
