@@ -11,16 +11,17 @@ const Home = () => {
   
 
     return (
-        <div className="min-h-screen">
+        <div className="">
             <div className="my-4">
                  <img  className="w-full h-[40vh]  md:h-[70vh] mx-auto" src={bannerImage} alt="" />
             </div>
             <div>
-                <h2 className="md:w-[450px] mx-auto font-bold p-2 rounded-sm text-center text-2xl bg-black text-yellow-400  ">
-                    Our Brand New Products From</h2>
+                <h2 className="mt-10 md:w-[400px] mx-auto font-bold p-2 rounded-lg text-center text-2xl bg-black text-yellow-400  ">
+                    Our Brand New Products</h2>
             </div>
            
-            <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>           
+            <div className="mt-4 w-full">
+            <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 pb-6'>           
                     {
                         brands.map(brand=><div key={brand.id}>
                             <Link to={`/${brand.name}`}>
@@ -32,6 +33,7 @@ const Home = () => {
                         </div>)
                     }
                 
+            </div>
             </div>
             <Helmet>
                 <title>FA | Home </title>

@@ -49,14 +49,13 @@ const MyCart = () => {
         })
     }
 
-
     return (
         <div>
 
             <div className="min-h-screen">
                 <div>
-                    <h2 className="md:w-[450px] mx-auto font-bold p-2 rounded-sm text-center text-2xl bg-black text-red-400  ">
-                        Cart Products of : <span className="italic">{firebaseUser.user.displayName}</span></h2>
+                    <h2 className="md:w-[350px] mx-auto font-bold p-2 rounded-sm text-center text-xl rounded-b-xl md:text-2xl bg-orange-200 text-zinc-600  ">
+                       Your Cart Products </h2>
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>
@@ -73,7 +72,7 @@ const MyCart = () => {
                                 <div className="flex  justify-center mt-5">
 
                                     <button
-                                        onClick={() => handleDelete(brand._id)} className="bg-green-400 hover:bg-red-500 btn btn-sm mr-5">Delete from cart</button>
+                                        onClick={() => handleDelete(brand._id)} className="bg-amber-200 border-2  border-red-200 hover:bg-red-500 btn btn-sm mr-5">Delete from cart</button>
 
 
                                 </div>

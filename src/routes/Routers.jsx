@@ -14,8 +14,8 @@ import Gucci from "../pages/brand_pages/Gucci";
 import Levis from "../pages/brand_pages/Levis";
 import HnM from "../pages/brand_pages/HnM";
 import Zara from "../pages/brand_pages/Zara";
-import AdidasDetails from "../pages/detailsPages/AdidasDetails";
 import UpdateProduct from "../pages/UpdateProduct";
+import ProductDetails from "../pages/detailsPages/ProductDetails";
 
 
 
@@ -36,24 +36,32 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/products')
             },
             {
-                path: '/nike',
-                element: <PrivateRouters><Nike></Nike></PrivateRouters>
+                path: '/Nike',
+                element: <PrivateRouters><Nike></Nike></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/products')
+
             },
             {
-                path: '/gucci',
-                element: <PrivateRouters><Gucci></Gucci></PrivateRouters>
+                path: '/Gucci',
+                element: <PrivateRouters><Gucci></Gucci></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/products')
+
             },
             {
-                path: `/levi's`,
-                element: <PrivateRouters><Levis></Levis></PrivateRouters>
+                path: '/Levi\'s',
+                element: <PrivateRouters><Levis></Levis></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/products')
+
             },
             {
                 path: '/h&m',
-                element: <PrivateRouters><HnM></HnM></PrivateRouters>
+                element: <PrivateRouters><HnM></HnM></PrivateRouters>,
+                loader: () => fetch('http://localhost:5000/products')
+
             },
             {
                 path: '/zaras',
-                element: <PrivateRouters><Zara></Zara></PrivateRouters>
+                element: <PrivateRouters><Zara></Zara></PrivateRouters>,
             },
             {
                 path: '/addproduct',
@@ -65,8 +73,8 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/cart')
             },
             {
-                path:'/adidas/:id',
-                element:<PrivateRouters><AdidasDetails></AdidasDetails></PrivateRouters>,
+                path:'/productDetails/:id',
+                element:<PrivateRouters><ProductDetails></ProductDetails></PrivateRouters>,
                 loader: () => fetch('http://localhost:5000/products')
             },
             {
