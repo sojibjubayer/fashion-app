@@ -72,7 +72,7 @@ const MyCart = () => {
                                 <div className="flex  justify-center mt-5">
 
                                     <button
-                                        onClick={() => handleDelete(brand._id)} className="bg-amber-200 border-2  border-red-200 hover:bg-red-500 btn btn-sm mr-5">Delete from cart</button>
+                                        onClick={() => handleDelete(brand._id)} className="bg-amber-200 border-2  border-red-400 hover:bg-red-500 btn btn-sm mr-5">Delete from cart</button>
 
 
                                 </div>

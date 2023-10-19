@@ -1,14 +1,15 @@
 [
     {
       "id": 1,
-      
       "name": "Adidas",
-      "image": "https://i.ibb.co/qY5BTyW/adidus.webp"
+      "image": "https://i.ibb.co/qY5BTyW/adidus.webp",
+      "website":"https://www.adidas.com/us"
     },
     {
       "id": 2,
       "name": "Nike",
-      "image": "https://i.ibb.co/k8tnjFh/nike.png"
+      "image": "https://i.ibb.co/k8tnjFh/nike.png",
+      "website":"https://www.nike.com/"
       
     },
     {

@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
-  // const Swal = require('sweetalert2')
+ 
 
   const handleAddProduct = event => {
     event.preventDefault()
@@ -56,10 +56,9 @@ const AddProduct = () => {
   return (
     <div className="bg-[#FED5A3]">
       <div className=" p-2 md:w-[70%] mx-auto">
-        <h2 className="text-2xl">Add Product  page</h2>
-        <form onSubmit={handleAddProduct}>
+        <h2 className="text-xl md:text-2xl text-center my-3 border-b-2 font-bold">Add Your Product</h2>
 
-          {/* form name and type row  */}
+        <form onSubmit={handleAddProduct}>
           <div className=" md:flex gap-20">
             <div className="form-control md:w-1/2">
               <label className="label">
@@ -91,7 +90,7 @@ const AddProduct = () => {
                 <span className="label-text">Type </span>
               </label>
               <label className="input-group">
-                <input type="text" name="type" placeholder="Type" className="w-full input input-bordered" required />
+                <input type="text" name="type" placeholder="Type: Shoes/ T-shirt/ Jacket/ Jeans..." className="w-full input input-bordered" required />
               </label>
             </div>
             <div className="form-control md:w-1/2">
@@ -109,7 +108,7 @@ const AddProduct = () => {
                 <span className="label-text">Short Description</span>
               </label>
               <label className="input-group">
-                <textarea type="text" name="sd" placeholder="Describe your product in short" className="w-full input input-bordered" />
+                <textarea type="text" name="sd" placeholder="Describe your product in short" className="w-full input input-bordered" required/>
               </label>
             </div>
 
@@ -130,12 +129,12 @@ const AddProduct = () => {
               </label>
               <label className="input-group">
 
-                <input type="text" name="image" placeholder="Image URL" className="w-full input input-bordered" />
+                <input type="text" name="image" placeholder="Image URL" className="w-full input input-bordered" required/>
               </label>
             </div>
           </div>
           <input type="submit" value="Add Product"
-            className="btn btn-ghost bg-orange-300 text-yellow-950 font-bold mt-5" />
+            className="btn btn-ghost bg-orange-300 hover:bg-green-300 mb-10 text-yellow-950 font-bold mt-5" />
         </form>
       </div>
     </div>

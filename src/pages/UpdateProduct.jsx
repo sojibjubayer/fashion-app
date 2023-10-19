@@ -58,7 +58,7 @@ const UpdateProduct = () => {
   return (
     
       <div className="bg-amber-200 ">
-        <h2 className="text-2xl">Update Product: <span className="text-blue-600">{name}</span></h2>
+        <h2 className="text-xl md:text-2xl font-bold text-center border-b-2 py-4">Update This Product</h2>
         <div className="p-2  md:w-[70%] mx-auto">
           <form onSubmit={handleUpdateProduct}>
 
@@ -107,7 +107,6 @@ const UpdateProduct = () => {
                   <span className="label-text">Price</span>
                 </label>
                 <label className="input-group">
-
                   <input type="number" name="price" defaultValue={price}
                     placeholder="Product Price" className="w-full input input-bordered" required />
                 </label>
@@ -120,7 +119,7 @@ const UpdateProduct = () => {
                 </label>
                 <label className="input-group">
                   <textarea type="text" name="sd" defaultValue={shortD}
-                    placeholder="Describe your product in short" className="w-full input input-bordered" />
+                    placeholder="Describe your product in short" className="w-full input input-bordered" required/>
                 </label>
               </div>
             </div>
@@ -141,12 +140,12 @@ const UpdateProduct = () => {
                 </label>
                 <label className="input-group">
                   <input type="text" name="image" defaultValue={image}
-                    placeholder="Image URL" className="w-full input input-bordered" />
+                    placeholder="Image URL" className="w-full input input-bordered" required/>
                 </label>
               </div>
             </div>
-            <input type="submit" value="Update Product"
-              className="btn btn-ghost bg-teal-300 text-yellow-950 font-bold mt-5" />
+            <input type="submit" value="submit"
+              className="btn  bg-orange-500 hover:bg-green-400 mb-10 text-yellow-950 font-bold mt-5" />
           </form>
         </div>
       </div>
