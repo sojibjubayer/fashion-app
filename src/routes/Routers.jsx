@@ -31,7 +31,7 @@ const router = createBrowserRouter([
                 loader: () => fetch('/brands.json')
             },
             {
-                path: '/adidas',
+                path: '/Adidas',
                 element: <PrivateRouters><Adidas></Adidas></PrivateRouters>,
                 loader: () => fetch('http://localhost:5000/products')
             },
@@ -67,7 +67,6 @@ const router = createBrowserRouter([
             {
                 path:'/adidas/:id',
                 element:<PrivateRouters><AdidasDetails></AdidasDetails></PrivateRouters>,
-                // loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`),
                 loader: () => fetch('http://localhost:5000/products')
             },
             {

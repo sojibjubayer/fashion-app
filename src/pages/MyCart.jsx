@@ -7,8 +7,9 @@ import Swal from "sweetalert2";
 
 const MyCart = () => {
     const cartResult = useLoaderData()
-    console.log(cartResult);
-    const{cartProduct,setCartProduct}=useState(cartResult)
+    const[cartProduct,setCartProduct]=useState(cartResult)
+    console.log(cartProduct);
+
     const firebaseUser = useContext(AuthContext)
 
     const handleDelete = _id => {
@@ -40,7 +41,7 @@ const MyCart = () => {
                     'success'
                 )
                 // filter from cart products and set it to remaining cart product
-                const remaining=cartProduct.filter(product=>product._id != _id)
+                const remaining=cartProduct.filter(fProduct=>fProduct._id != _id)
                 setCartProduct(remaining)
                     }
                 })
@@ -60,7 +61,7 @@ const MyCart = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>
                     {
-                        cartResult.filter(target => target.email == firebaseUser.user.email).map(brand => <div key={brand.id}>
+                        cartProduct.filter(target => target.email == firebaseUser.user.email).map(brand => <div key={brand._id}>
                             <div className="md:w-[350px] h-[400px] mx-auto bg-amber-200 rounded-t-xl">
                                 <img className="w-full h-[230px] rounded-t-xl" src={brand.image} alt="" />
                                 <h3 className=" text-center text-xl font-bold pt-2">{brand.name}</h3>
