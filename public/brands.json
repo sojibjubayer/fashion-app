@@ -15,24 +15,29 @@
     {
       "id": 3,
       "name": "Gucci",
-      "image": "https://i.ibb.co/d0Sdqw1/gucci.png"
+      "image": "https://i.ibb.co/d0Sdqw1/gucci.png",
+      "website":"https://www.gucci.com/us/en/"
     },
     {
       "id": 4,
       "name": "Levi's",
-      "image": "https://i.ibb.co/t35cXwZ/levis.webp"
+      "image": "https://i.ibb.co/t35cXwZ/levis.webp",
+      "website":"https://www.levi.com/US/en_US/"
       
     },
     {
       "id": 5,
       "name": "H&M",
-      "image": "https://i.ibb.co/dPbbFsR/hnm.jpg"
+      "image": "https://i.ibb.co/dPbbFsR/hnm.jpg",
+      "website":"https://en.wikipedia.org/wiki/H%26M"
     },
     {
       "id": 6,
       
       "name": "Zara",
-      "image": "https://i.ibb.co/x5zsry7/zara.jpg"
+      "image": "https://i.ibb.co/x5zsry7/zara.jpg",
+      "website":"https://www.zara.com/"
+
     }
   ]
   

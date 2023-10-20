@@ -38,17 +38,13 @@ const Gucci = () => {
                         <button onClick={nextSlide}><FaArrowAltCircleRight className="bg-white rounded-full text-black text-3xl md:text-4xl"></FaArrowAltCircleRight></button>
                     </div>
                 </div>
-                <div className="mt-10 md:mt-16">
-                    <h2 className="md:w-[350px] mx-auto  font-bold p-2 rounded-xl text-center text-white text-2xl bg-cyan-400   ">
-                        <span className="italic">Happy Shopping</span></h2>
-                </div>
-
+                
                 <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-5 py-7'>
                     {
                         brandProduct.filter(check => check.brand == 'Gucci').map(brand => <div key={brand._id}>
                             <div className="md:w-[350px] h-[420px] mx-auto bg-amber-200 rounded-t-xl">
                                 <img className="w-full h-[230px] rounded-t-xl" src={brand.image} alt="" />
-                                <h3 className=" text-center text-xl font-bold pt-2">{brand.name}</h3>
+                                <h3 className=" text-center text-xl font-bold  bg-[#438A92] text-yellow-400">{brand.name}</h3>
                                 <h3 className="-mt-2 text-center text-base font-bold pt-2">Brand: {brand.brand}</h3>
                                 <h3 className="text-center text-base font-bold pt-2">Category: {brand.type}</h3>
                                 <div className="flex  justify-center">

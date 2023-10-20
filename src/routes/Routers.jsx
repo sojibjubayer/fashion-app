@@ -33,35 +33,36 @@ const router = createBrowserRouter([
             {
                 path: '/Adidas',
                 element: <PrivateRouters><Adidas></Adidas></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
             },
             {
                 path: '/Nike',
                 element: <PrivateRouters><Nike></Nike></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
 
             },
             {
                 path: '/Gucci',
                 element: <PrivateRouters><Gucci></Gucci></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
 
             },
             {
                 path: '/Levi\'s',
                 element: <PrivateRouters><Levis></Levis></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
 
             },
             {
                 path: '/h&m',
                 element: <PrivateRouters><HnM></HnM></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
 
             },
             {
-                path: '/zaras',
+                path:'/zara',
                 element: <PrivateRouters><Zara></Zara></PrivateRouters>,
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
             },
             {
                 path: '/addproduct',
@@ -70,17 +71,17 @@ const router = createBrowserRouter([
             {
                 path: '/mycart',
                 element: <PrivateRouters><MyCart></MyCart></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/cart')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/cart')
             },
             {
                 path:'/productDetails/:id',
                 element:<PrivateRouters><ProductDetails></ProductDetails></PrivateRouters>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
             },
             {
                 path:'/updateProduct/:id',
                 element:<UpdateProduct></UpdateProduct>,
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)            
+                loader:({params})=>fetch(`https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products/${params.id}`)            
             },
             {
                 path: '/login',

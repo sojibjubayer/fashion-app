@@ -12,7 +12,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [fetchData, setFetchdata] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/products')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
@@ -104,7 +104,7 @@ const Home = () => {
 
             <div>
                 <div>
-                    <h2 className=" italic mb-5 mt-14 md:w-[400px] mx-auto font-bold p-2 rounded-lg text-center text-2xl bg-black text-emerald-500  ">
+                    <h2 className=" italic mb-5 mt-14 md:w-[300px] mx-auto font-bold p-2 rounded-lg text-center text-2xl bg-black text-emerald-500  ">
                         Visit Our Brands</h2>
                 </div>
                 <div>

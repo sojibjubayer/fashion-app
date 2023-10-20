@@ -21,7 +21,7 @@ const ProductDetails = () => {
     cartBrand.email = firebaseUser.user.email
     console.log(brand);
 
-    fetch('http://localhost:5000/cart', {
+    fetch('https://fashion-app-server-psbiefrlt-sojibjubayers-projects.vercel.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -50,12 +50,12 @@ const ProductDetails = () => {
                 <img className="w-full md:w-[450px] h-[250px] md:h-[330px] rounded-r-xl" src={brand.image} alt="" />
               </div>
               <div className="p-2 md:w-2/3">
-                <h3 className=" text-center text-xl font-bold pt-2">{brand.name}</h3>
-                <h3 className=" text-center text-base font-bold pt-2">Brand: {brand.brand}</h3>
-                <h3 className="text-center text-base font-bold pt-2">Category: {brand.type}</h3>
-                <div className="flex  justify-center">
-                  <h3 className="mr-5 text-center text-base font-bold pt-2"><span className="font-bold">Price:</span> {brand.price}$</h3>
-                  <h3 className="text-center text-base font-bold pt-2"><span className="font-bold">Rating:</span>
+                <h3 className="  text-xl font-bold pt-2">{brand.name}</h3>
+                <h3 className="  text-base font-bold pt-2">Brand: {brand.brand}</h3>
+                <h3 className=" text-base font-bold pt-2">Category: {brand.type}</h3>
+                <div className="flex  ">
+                  <h3 className="mr-5  text-base font-bold pt-2"><span className="font-bold">Price:</span> {brand.price}$</h3>
+                  <h3 className=" text-base font-bold pt-2"><span className="font-bold">Rating:</span>
                     <span className="bg-white px-1 rounded ml-1">{brand.rating}</span></h3>
                 </div>
                 <div className="flex  justify-center">
