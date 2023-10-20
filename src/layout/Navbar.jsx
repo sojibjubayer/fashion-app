@@ -31,20 +31,15 @@ const Navbar = () => {
     </>
     return (
         <div className="">
-
-
             <nav className="bg-[#FFA171] px-3 flex flex-col  md:flex-row items-center justify-between">
                 <div className="flex items-center">
                     <div className="hidden  md:flex gap-3 items-center mr-[200px]">
-                        <img src={logo} className="w-16 h-16 " alt="" />
+                        <img src={logo} className="md:w-16 w-12 h-12 md:h-16 " alt="" />
                         <h3 className="text-xl font-semibold text-zinc-950">Fashion APp</h3>
                     </div>
-
                     <ul className="flex flex-col md:flex-row  gap-10 text-black md:font-semibold md:text-xl">
 
                         <li className="flex gap-10">{navLinks}</li>
-                        
-
                     </ul>
                 </div>
                 <div>
