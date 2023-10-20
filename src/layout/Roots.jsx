@@ -13,7 +13,7 @@ const Roots = () => {
     return (
 
         <div className={` ${isDarkTheme ? 'bg-white' : 'bg-[#333]'}`}>
-            <div className="md:w-[90%] w-[95%] mx-auto">
+            <div className="md:w-[90%] w-[93%] mx-auto">
                 <Navbar></Navbar>
                 <div className="flex justify-end">
                     <button className="bg-teal-400 text-end px-1 rounded-l-sm text-white" onClick={toggleTheme}>
