@@ -31,7 +31,7 @@ const Home = () => {
 
     return (
         <div className="">
-            <div className="my-4">
+            <div className="mb-4 mt-1">
                 <img className="w-full h-[40vh]  md:h-[70vh] mx-auto" src={bannerImage} alt="" />
             </div>
             <div>
