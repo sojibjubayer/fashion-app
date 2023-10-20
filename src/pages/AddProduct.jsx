@@ -1,8 +1,9 @@
+import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 
 
 const AddProduct = () => {
- 
+
 
   const handleAddProduct = event => {
     event.preventDefault()
@@ -108,7 +109,7 @@ const AddProduct = () => {
                 <span className="label-text">Short Description</span>
               </label>
               <label className="input-group">
-                <textarea type="text" name="sd" placeholder="Describe your product in short" className="w-full input input-bordered" required/>
+                <textarea type="text" name="sd" placeholder="Describe your product in short" className="w-full input input-bordered" required />
               </label>
             </div>
 
@@ -129,7 +130,7 @@ const AddProduct = () => {
               </label>
               <label className="input-group">
 
-                <input type="text" name="image" placeholder="Image URL" className="w-full input input-bordered" required/>
+                <input type="text" name="image" placeholder="Image URL" className="w-full input input-bordered" required />
               </label>
             </div>
           </div>
@@ -137,6 +138,9 @@ const AddProduct = () => {
             className="btn btn-ghost bg-orange-300 hover:bg-green-300 mb-10 text-yellow-950 font-bold mt-5" />
         </form>
       </div>
+      <Helmet>
+        <title>FA | Add Products </title>
+      </Helmet>
     </div>
   );
 };

@@ -76,7 +76,6 @@ const MyCart = () => {
                                     <button
                                         onClick={() => handleDelete(brand._id)} className="bg-amber-200 border-2  border-red-400 hover:bg-red-500 btn btn-sm mr-5">Delete from cart</button>
 
-
                                 </div>
                             </div>
                         </div>)
@@ -84,7 +83,7 @@ const MyCart = () => {
 
                 </div>
                 <Helmet>
-                    <title>FA | Adidas </title>
+                    <title>FA | My Cart </title>
                 </Helmet>
             </div>
 

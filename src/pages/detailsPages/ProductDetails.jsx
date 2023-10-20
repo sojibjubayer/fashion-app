@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -72,9 +71,7 @@ const ProductDetails = () => {
         }
 
       </div>
-      <Helmet>
-        <title>FA | Adidas </title>
-      </Helmet>
+     
     </div>
   );
 };

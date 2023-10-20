@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 
 
 const ContactUs = () => {
@@ -40,6 +41,9 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
+                <Helmet>
+                    <title>FA | Contact Us </title>
+                </Helmet>
             </div>
         </div>
     );
