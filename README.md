@@ -15,3 +15,6 @@
 - After clicking on a brand name the page will take the user to a page where the related products of that brand are shown as card.
 - The card included details and update button ,user can see details about the product and also can update product information,but for this user must be autheticated.
 - After seeing the details of a product user can add the product at cart.And at cart user can see all the card added by that user.Here user also can delete a cart product.
+
+### Used Technology:
+- React, Daisy UI, Node.js,Express.js,MongoDB
